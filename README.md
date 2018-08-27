@@ -3,7 +3,9 @@
 
 In this project I will demonstrate a Deep Q Learning appraoch to train an agent to solve the provided Banana navigation environment.
 
-![Bananna](https://github.com/bohoro/Navigation/raw/master/media/BNav.jpeg)
+[![Alt text](https://img.youtube.com/vi/EwCTUsLiWcg/0.jpg)](https://www.youtube.com/watch?v=EwCTUsLiWcg)
+
+Watch the trained agent in action.
 
 This project contains:
 * Functional, well-documented, and organized code for training the agent implemented in PyTorch and Python 3
