@@ -34,10 +34,10 @@ def getEnvInfo(env_info):
     return(next_state, reward, done)
 
 
-agent = Agent(state_size=state_size, action_size=action_size, seed=0)
+agent = Agent(state_size=state_size, action_size=action_size, seed=1)
 
 
-def dqn(n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01,
+def dqn(n_episodes=2500, max_t=1000, eps_start=1.0, eps_end=0.01,
         eps_decay=0.995):
     """Deep Q-Learning.
 
