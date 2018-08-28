@@ -14,7 +14,17 @@ An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPR
 
 ![RL](https://github.com/bohoro/Navigation/raw/master/media/sutton.png)
 
-The learning algorith used in this project was a double DQN with an optional experimental version of Prioritized Experience Replay.  It was directly derived from the following works:
+In this project the agent takes actions on the banana enviroment and recieves a new state and a reward. 
+
+* A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of my agent was to collect as many yellow bananas as possible while avoiding blue bananas.
+
+* The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available
+
+* The learning algorith used in this project was a double DQN with an optional experimental version of Prioritized Experience Replay.  
+
+
+It was directly derived from the following works:
+
 * [Human-level control through deep reinforcement
 learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
 * [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461)
