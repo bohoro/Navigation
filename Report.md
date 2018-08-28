@@ -18,13 +18,13 @@ In this project, the agent takes actions on the banana environment and receives 
 
 * A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of my agent was to collect as many yellow bananas as possible while avoiding blue bananas.
 * The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction. 
-*Given this information, the agent has to learn how to best select actions. Four discrete actions are available, move forward, move backward, turn left and turn right.
+* Given this information, the agent has to learn how to best select actions. Four discrete actions are available, move forward, move backward, turn left and turn right.
 
 The task is episodic, and to solve the environment, my agent had to get an average score of +13 over 100 consecutive episodes.
 
 #### Double DQN 
 
-* The learning algorithm used in this project was a double DQN with an optional experimental version of Prioritized Experience Replay.  
+The learning algorithm used in this project was a double DQN with an optional experimental version of Prioritized Experience Replay.  
 
 The end learning algorithm derived from the following works:
 
@@ -38,11 +38,31 @@ Here is the TL;DR summary of the papers and the use of their techniques in the p
 
 The core algorithm is that of a Deep Q-Network (DQN).  My DQN combines Reinforcement Learning with Deep Learning with fixed targets and experience replay per the DeepMind research[1].  In addition, it adds Double Q-learning component to avoid overestimates in my action values[2].  Finally, an optional experimental version of Prioritized Experience Replay component was implemented by not used in the final solution[3].
 
-At the core of the learning algorithm was a neural network.   It contained -- to do--
+At the core of the learning algorithm was a neural network.   It contained 4 Linear layers witrh output of 128, 64, 32, and 4.  All non-final layers used relu activation.  
 
 #### Hyper Parameters used
 
---to do--
+The agent used the following paramaeters and hyper parameters.  
+
+The size of the buffer for replay experiences
+* BUFFER_SIZE = int(1e5)  
+
+The minibatch size used for learning from expereince
+* BATCH_SIZE = 64
+
+The discpount factor for the bellman equation.
+* GAMMA = 0.99
+
+Interpolation parameter used in the soft update
+* TAU = 1e-3              
+
+Learning rate used in the Adam optimizer
+* LR = 5e-4
+
+If enough samples are in the buffer, this is how often the learning stpe is executed
+* UPDATE_EVERY = 4        
+
+Training output is below.
 
 ```
 Training Agent
@@ -64,4 +84,7 @@ Please find below the plot of the training episodes.  The top plot is the 100 ep
 
 ## Ideas for Future Work
 
-##### to do
+* Implement a more performannt version of Prioritized Experience Replay.  
+* Add Dueling networks, see [Dueling Network Architectures for Deep Reinforcement Learning](http://proceedings.mlr.press/v48/wangf16.pdf)
+* Add Noisy Networks, see [
+Noisy Networks for Exploration](https://arxiv.org/abs/1706.10295)
