@@ -86,3 +86,9 @@ def dqn(n_episodes=2500, max_t=1000, eps_start=1.0, eps_end=0.01,
 
 
 scores = dqn()
+
+# Write the per episode scores out
+f = open("episodes.csv", "w")
+for i,v in enumerate(scores):
+    f.write(str(i+1)+","+str(v)+"\n")
+f.close()
