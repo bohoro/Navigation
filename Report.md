@@ -9,7 +9,21 @@ If you would like to install and run the code see the installation steps [here](
 
 ## Learning Algorithm
 
-##### to do
+The reinforcement learning problem as specificfied by Richard S. Sutton and Andrew G. Barto, [Reinforcement Learning:
+An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
+
+![RL](https://github.com/bohoro/Navigation/raw/master/media/sutton.png)
+
+The learning algorith used in this project was a double DQN with an optional experimental version of Prioritized Experience Replay.  It was directly derived from the following works:
+* [Human-level control through deep reinforcement
+learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+* [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461)
+* [
+Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)
+
+Here is the TL;DR summary of the papers and the use of their techniques in the project.
+
+The core algorith is that of a Deep Q-Netowk (DQN).  DQN   
 
 ```
 Training Agent
